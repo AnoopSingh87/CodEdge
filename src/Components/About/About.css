@@ -1,0 +1,192 @@
+/* General Styles */
+
+.about-page {
+  padding-top: 80px; /* Space for Navbar */
+}
+
+/* About Section */
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align items to the top */
+  padding: 50px 20px;
+  background-color: #ffffff;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  align-items: center;
+  gap: 20px;
+}
+
+.about-image-container {
+  flex: 1 1 45%; /* Adjusted width for better balance */
+  max-width: 500px; /* Set a max-width for the image container */
+}
+
+.about-image {
+  width: 70vh;
+  border-radius: 999px;
+
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-image:hover {
+  transform: scale(1.05);
+}
+
+.about-content {
+  flex: 1 1 50%;
+  padding: 20px;
+}
+
+.about-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.about-content h3 {
+  font-size: 1.5rem;
+  color: #d62828;
+  margin-bottom: 15px;
+}
+
+.about-content p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.cta-button {
+  background-color: #d62828;
+  color: white;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+  background-color: #a50e0e;
+  transform: scale(1.05);
+}
+
+/* Statistics Section */
+.statistics-section {
+  background-color: #f9f9f9;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.statistics-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.stat-item {
+  background: white;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.stat-item h3 {
+  font-size: 2rem;
+  color: #d62828;
+}
+
+.stat-item p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Mission Section */
+.mission-section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.mission-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.mission-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+
+.mission-card {
+  background: white;
+  padding: 25px 30px;
+  border-radius: 12px; /* More rounded corners */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  margin: 10px; /* Added some margin */
+}
+
+.mission-card:hover {
+  transform: translateY(-12px); /* Slightly larger hover effect */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  background-color: #f8f8f8; /* Light background change on hover */
+}
+
+.mission-card img {
+  width: 60px;
+  margin-bottom: 15px;
+}
+
+.mission-card h3 {
+  font-size: 1.5rem;
+  color: #d62828;
+  margin-bottom: 10px;
+}
+
+.mission-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image-container,
+  .about-content {
+    flex: 1 1 100%; /* Stack them vertically on smaller screens */
+  }
+
+  .statistics-container {
+    flex-direction: column;
+  }
+
+  .mission-cards {
+    flex-direction: column;
+    align-items: center; /* Ensure cards are centered in mobile view */
+  }
+
+  .mission-card {
+    max-width: 90%; /* Allow cards to be smaller on mobile */
+  }
+}

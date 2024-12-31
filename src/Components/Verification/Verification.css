@@ -1,0 +1,179 @@
+/* Container for verification page */
+.verification-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Centers content horizontally */
+    justify-content: center;  /* Centers content vertically */
+    padding: 80px 20px;  /* Navbar-safe padding */
+    min-height: calc(100vh - 80px);  /* Remaining height below navbar */
+    background-image: url('/src/assets/page-turner.png');  /* Replace with the path to your image */
+    background-size: cover;  /* Make sure the image covers the entire container */
+    background-position: center center;  /* Center the background image */
+    background-repeat: no-repeat;  /* Prevent image from repeating */
+}
+
+/* Content Box */
+.verification-content {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    padding: 40px 30px;
+    max-width: 600px;  /* Increased max-width for better content display */
+    width: 100%;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+    margin-top: 50px;
+}
+
+/* Title and Description */
+.verification-content h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.verification-content p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+/* Input Group Styling */
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.input-group input {
+    flex: 1;
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #00c6ff;
+}
+
+.verify-button {
+    background: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.verify-button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Error Message */
+.error-message {
+    color: #dc3545;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    /* For tablets and smaller devices */
+    .verification-container {
+        padding: 60px 20px; /* Adjust padding */
+    }
+
+    .verification-content {
+        padding: 30px 20px;
+    }
+
+    .verification-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .verification-content p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    /* For mobile devices (tablets and below) */
+    .verification-container {
+        padding: 50px 20px; /* Adjust padding for smaller devices */
+    }
+
+    .verification-content {
+        padding: 25px 15px;
+        width: 90%; /* Ensure content box fits the screen */
+    }
+
+    .verification-content h1 {
+        font-size: 2rem;
+    }
+
+    .verification-content p {
+        font-size: 1rem;
+    }
+
+    .input-group input {
+        font-size: 0.9rem;
+    }
+
+    .verify-button {
+        font-size: 1rem;
+        padding: 10px 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* For very small mobile devices (small screens) */
+    .verification-container {
+        padding: 40px 15px; /* Adjust padding further */
+    }
+
+    .verification-content {
+        padding: 20px 12px;
+        width: 95%;
+    }
+
+    .verification-content h1 {
+        font-size: 1.6rem;
+    }
+
+    .verification-content p {
+        font-size: 0.9rem;
+    }
+
+    .input-group input {
+        font-size: 0.85rem;
+    }
+
+    .verify-button {
+        font-size: 0.9rem;
+        padding: 10px 16px;
+    }
+}
